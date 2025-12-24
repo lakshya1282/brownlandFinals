@@ -1,15 +1,14 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [activeLink, setActiveLink] = useState("home")
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,8 +18,9 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, linkName: string) => {
     e.preventDefault()
+    setActiveLink(linkName)
     const element = document.querySelector(href)
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
@@ -28,121 +28,93 @@ export function Navbar() {
     }
   }
 
+  const navItems = [
+    { name: "Home", href: "#home", id: "home" },
+    { name: "The Story", href: "#about", id: "story" },
+    { name: "Menu", href: "#menu", id: "menu" },
+    { name: "Franchise", href: "/franchise", id: "franchise", isExternal: true },
+    { name: "Contact", href: "#dishes", id: "aboutus" },
+  ]
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-gradient-to-b from-background via-background/95 to-background/80 backdrop-blur-md border-b border-border shadow-lg"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
+        scrolled 
+           ? "bg-gradient-to-b from-background via-background/95 to-background/80 backdrop-blur-md border-b border-border shadow-lg"
           : "bg-gradient-to-b from-black/70 via-black/40 to-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <a href="#home" onClick={(e) => handleNavClick(e, "#home")} className="flex items-center gap-2 group">
-            <img src="/images/logo.png" alt="Brownland Coffee" className="h-12 w-auto object-contain" />
-            <span className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-              Brownland
-            </span>
-          </a>
-
-          <div className="hidden md:flex items-center gap-8">
-            <a
-              href="#home"
-              onClick={(e) => handleNavClick(e, "#home")}
-              className="text-foreground/80 hover:text-primary transition-colors"
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              onClick={(e) => handleNavClick(e, "#about")}
-              className="text-foreground/80 hover:text-primary transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="#gallery"
-              onClick={(e) => handleNavClick(e, "#gallery")}
-              className="text-foreground/80 hover:text-primary transition-colors"
-            >
-              Gallery
-            </a>
-            <a
-              href="#dishes"
-              onClick={(e) => handleNavClick(e, "#dishes")}
-              className="text-foreground/80 hover:text-primary transition-colors"
-            >
-              Dishes
-            </a>
-            <a
-              href="#menu"
-              onClick={(e) => handleNavClick(e, "#menu")}
-              className="text-foreground/80 hover:text-primary transition-colors"
-            >
-              Menu
-            </a>
-            <Link href="/franchise" className="text-foreground/80 hover:text-primary transition-colors">
-              Franchise
-            </Link>
-            <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">Contact Us</Button>
-            </a>
+      <div className="w-full px-6 sm:px-10 lg:px-16">
+        <div className="flex items-center justify-between">
+          
+          {/* LEFTMOST: Logo */}
+          <div 
+            className="flex-shrink-0 cursor-pointer" 
+            onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+          >
+            <img 
+              src="/BL-WHITE-LOGO (1).png" 
+              alt="Brownland Coffee" 
+              className="h-10 sm:h-12 md:h-14 w-auto object-contain" 
+            />
           </div>
 
-          <button className="md:hidden text-foreground" onClick={() => setIsOpen(!isOpen)}>
+          {/* RIGHTMOST: Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-6 lg:gap-10">
+            {navItems.map((item) => (
+              item.isExternal ? (
+                <Link
+                  key={item.id}
+                  href={item.href}
+                  className="text-[10px] lg:text-xs uppercase tracking-[0.3em] font-light text-[#f5e9dd] hover:text-white transition-colors duration-300"
+                  onClick={() => setActiveLink(item.id)}
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <a
+                  key={item.id}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href, item.id)}
+                  className={`text-[10px] lg:text-xs uppercase tracking-[0.3em] font-light relative group transition-colors duration-300 ${
+                    activeLink === item.id 
+                      ? "text-white font-normal" 
+                      : "text-[#f5e9dd]/80 hover:text-white"
+                  }`}
+                  style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                >
+                  {item.name}
+                  {/* The underline color matches the coffee cream aesthetic */}
+                  <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#d9bfa5] transition-all duration-500 group-hover:w-full" />
+                </a>
+              )
+            ))}
+          </div>
+
+          {/* Mobile menu button */}
+          <button 
+            className="md:hidden p-2 text-white" 
+            onClick={() => setIsOpen(!isOpen)}
+          >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
+        {/* Mobile Navigation Dropdown */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <div className="flex flex-col gap-4 px-2">
-              <a
-                href="#home"
-                onClick={(e) => handleNavClick(e, "#home")}
-                className="text-foreground/80 hover:text-primary transition-colors py-2"
+          <div className="md:hidden absolute top-full left-0 right-0 bg-[#3b2213]/95 backdrop-blur-xl border-t border-white/5 py-10 flex flex-col items-center gap-8 animate-in fade-in slide-in-from-top-4">
+            {navItems.map((item) => (
+               <a
+                key={item.id}
+                href={item.href}
+                onClick={(e) => {
+                  if(!item.isExternal) handleNavClick(e, item.href, item.id)
+                }}
+                className="text-[11px] uppercase tracking-[0.4em] text-[#f5e9dd] font-light"
               >
-                Home
+                {item.name}
               </a>
-              <a
-                href="#about"
-                onClick={(e) => handleNavClick(e, "#about")}
-                className="text-foreground/80 hover:text-primary transition-colors py-2"
-              >
-                About
-              </a>
-              <a
-                href="#gallery"
-                onClick={(e) => handleNavClick(e, "#gallery")}
-                className="text-foreground/80 hover:text-primary transition-colors py-2"
-              >
-                Gallery
-              </a>
-              <a
-                href="#dishes"
-                onClick={(e) => handleNavClick(e, "#dishes")}
-                className="text-foreground/80 hover:text-primary transition-colors py-2"
-              >
-                Dishes
-              </a>
-              <a
-                href="#menu"
-                onClick={(e) => handleNavClick(e, "#menu")}
-                className="text-foreground/80 hover:text-primary transition-colors py-2"
-              >
-                Menu
-              </a>
-              <Link
-                href="/franchise"
-                className="text-foreground/80 hover:text-primary transition-colors py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                Franchise
-              </Link>
-              <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>
-                <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">Contact Us</Button>
-              </a>
-            </div>
+            ))}
           </div>
         )}
       </div>

@@ -24,49 +24,47 @@ export function FranchiseHero() {
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto py-20">
-        <p className="text-primary text-xs sm:text-sm md:text-base uppercase tracking-[0.2em] sm:tracking-[0.3em] mb-3 sm:mb-4 font-medium aos-fade-up">
-          More Than Coffee
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 py-24 sm:py-28 md:py-32 max-w-5xl mx-auto text-center">
+        <p
+          className="text-xs sm:text-sm md:text-base tracking-[0.4em] uppercase text-[#d9bfa5] mb-4 md:mb-6 font-medium"
+          style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+        >
+          Franchise Opportunity
         </p>
+
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight aos-fade-up"
-          style={{ transitionDelay: "0.1s" }}
+          className="text-5xl sm:text-3xl md:text-5xl lg:text-7xl text-white mb-6 md:mb-8 italic"
+          style={{ 
+            fontFamily: "var(--font-cormorant), serif",
+            textShadow: "2px 4px 10px rgba(0,0,0,0.3)"
+          }}
         >
-          Brownland
-          <span className="block text-primary mt-2">Franchise Opportunity</span>
+          <span className="block">Brownland Franchise</span>
         </h1>
+
         <p
-          className="text-base sm:text-lg md:text-xl text-white/80 mb-3 sm:mb-4 max-w-2xl mx-auto leading-relaxed aos-fade-up"
-          style={{ transitionDelay: "0.2s" }}
+          className="text-sm sm:text-base md:text-lg lg:text-xl text-[#f5e9dd] max-w-2xl mx-auto leading-relaxed mb-8 md:mb-10 font-light"
+          style={{ fontFamily: " sans-serif" }}
         >
-          Become a Member of BROWNLAND COFFEE Family
+          Become a Member of BROWNLAND COFFEE Family with 0% Royalty!
         </p>
-        <p
-          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-6 sm:mb-8 aos-fade-up"
-          style={{ transitionDelay: "0.3s" }}
+
+        <Button
+          size="lg"
+          onClick={scrollToForm}
+          className="mt-6 sm:mt-8 bg-white text-[#3b2213] hover:bg-[#d9bfa5] hover:text-white transition-all duration-300 text-sm sm:text-base md:text-lg px-12 py-7 rounded-full shadow-xl shadow-black/30 font-semibold uppercase tracking-widest"
+          style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
         >
-          With 0% Royalty!
-        </p>
-        <div
-          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center aos-fade-up"
-          style={{ transitionDelay: "0.4s" }}
+          Apply for Franchise
+        </Button>
+        <Button
+          size="lg"
+          variant="outline"
+          asChild
+          className="text-base sm:text-lg px-6 sm:px-8 border-white/30 text-white hover:bg-white/10 bg-transparent w-full sm:w-auto"
         >
-          <Button
-            size="lg"
-            onClick={scrollToForm}
-            className="bg-primary text-primary-foreground hover:bg-primary/90 text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto"
-          >
-            Apply for Franchise
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            asChild
-            className="text-base sm:text-lg px-6 sm:px-8 border-white/30 text-white hover:bg-white/10 bg-transparent w-full sm:w-auto"
-          >
-            <a href="tel:+916265470873">Call: +91 6265470873</a>
-          </Button>
-        </div>
+          <a href="tel:+916265470873">Call: +916265470873</a>
+        </Button>
       </div>
 
       {/* Scroll Indicator */}

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 export function FranchiseNavbar() {
@@ -27,61 +26,86 @@ export function FranchiseNavbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-gradient-to-b from-background via-background/95 to-background/80 backdrop-blur-md border-b border-border shadow-lg"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
+        scrolled 
+           ? "bg-gradient-to-b from-background via-background/95 to-background/80 backdrop-blur-md border-b border-border shadow-lg"
           : "bg-gradient-to-b from-black/70 via-black/40 to-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2 group">
-            <img src="/images/logo.png" alt="Brownland Coffee" className="h-12 w-auto object-contain" />
-            <span className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-              Brownland
-            </span>
+      <div className="w-full px-6 sm:px-10 lg:px-16">
+        <div className="flex items-center justify-between">
+          
+          {/* LEFTMOST: Logo */}
+          <Link href="/" className="flex-shrink-0">
+            <img 
+              src="/BL-WHITE-LOGO (1).png" 
+              alt="Brownland Coffee" 
+              className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-all duration-300" 
+            />
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-foreground/80 hover:text-primary transition-colors">
+          {/* RIGHTMOST: Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8 lg:gap-12">
+            <Link 
+              href="/" 
+              className="text-[10px] lg:text-xs uppercase tracking-[0.3em] font-light text-[#f5e9dd] hover:text-white transition-all duration-300 relative group"
+              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+            >
               Home
+              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#d9bfa5] transition-all duration-500 group-hover:w-full" />
             </Link>
+            
             <button
               onClick={() => scrollToSection("#why-us")}
-              className="text-foreground/80 hover:text-primary transition-colors"
+              className="text-[10px] lg:text-xs uppercase tracking-[0.3em] font-light text-[#f5e9dd] hover:text-white transition-all duration-300 relative group text-left"
+              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
             >
               Why Us
+              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#d9bfa5] transition-all duration-500 group-hover:w-full" />
             </button>
-            <button onClick={() => scrollToSection("#franchise-form")}>
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">Apply Now</Button>
+
+            {/* Apply Now - Styled as a Nav Link */}
+            <button
+              onClick={() => scrollToSection("#franchise-form")}
+              className="text-[10px] lg:text-xs uppercase tracking-[0.3em] font-light text-[#f5e9dd] hover:text-white transition-all duration-300 relative group text-left"
+              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+            >
+              Apply Now
+              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#d9bfa5] transition-all duration-500 group-hover:w-full" />
             </button>
           </div>
 
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-foreground">
+          {/* Mobile menu button */}
+          <button 
+            onClick={() => setIsOpen(!isOpen)} 
+            className="md:hidden p-2 text-white ml-auto"
+          >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
+        {/* Mobile Navigation Dropdown */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md">
-            <div className="flex flex-col gap-4">
-              <Link
-                href="/"
-                onClick={() => setIsOpen(false)}
-                className="text-foreground/80 hover:text-primary transition-colors px-4"
-              >
-                Home
-              </Link>
-              <button
-                onClick={() => scrollToSection("#why-us")}
-                className="text-foreground/80 hover:text-primary transition-colors text-left px-4"
-              >
-                Why Us
-              </button>
-              <button onClick={() => scrollToSection("#franchise-form")} className="px-4">
-                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">Apply Now</Button>
-              </button>
-            </div>
+          <div className="md:hidden absolute top-full left-0 right-0 bg-[#3b2213]/95 backdrop-blur-xl border-t border-white/5 py-10 flex flex-col items-center gap-8 animate-in fade-in slide-in-from-top-4">
+            <Link
+              href="/"
+              onClick={() => setIsOpen(false)}
+              className="text-[11px] uppercase tracking-[0.4em] text-[#f5e9dd] font-light"
+            >
+              Home
+            </Link>
+            <button
+              onClick={() => scrollToSection("#why-us")}
+              className="text-[11px] uppercase tracking-[0.4em] text-[#f5e9dd] font-light"
+            >
+              Why Us
+            </button>
+            <button
+              onClick={() => scrollToSection("#franchise-form")}
+              className="text-[11px] uppercase tracking-[0.4em] text-[#f5e9dd] font-light"
+            >
+              Apply Now
+            </button>
           </div>
         )}
       </div>

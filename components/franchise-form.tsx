@@ -34,7 +34,7 @@ export function FranchiseForm() {
     setTimeout(() => {
       const message = `*Franchise Inquiry - Brownland Coffee*%0A%0A*Full Name:* ${formData.fullName}%0A*Age:* ${formData.age}%0A*Date of Birth:* ${formData.dateOfBirth}%0A*Contact Number:* ${formData.contactNumber}%0A*Email:* ${formData.email}%0A*Residential Address:* ${formData.residentialAddress}%0A*City:* ${formData.city}%0A*Preferred Franchise Location:* ${formData.preferredLocation}%0A%0AI am interested in owning a Brownland Coffee franchise.`
 
-      const whatsappUrl = `https://wa.me/919303795369?text=${message}`
+      const whatsappUrl = `https://wa.me/916265470873?text=${message}`
       window.open(whatsappUrl, "_blank")
 
       // Reset form and hide message
@@ -225,7 +225,7 @@ export function FranchiseForm() {
 
               <div className="space-y-6">
                 <a
-                  href="tel:+916265470873"
+                  href="tel:"
                   className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <div className="bg-primary/10 p-3 rounded-full">
@@ -286,7 +286,7 @@ export function FranchiseForm() {
 
               {/* Direct WhatsApp Button */}
               <a
-                href="https://wa.me/919303795369?text=Hi, I am interested in Brownland Coffee franchise opportunity."
+                href="https://wa.me/916265470873?text=Hi, I am interested in Brownland Coffee franchise opportunity."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 flex items-center justify-center gap-2 w-full bg-[#25D366] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#25D366]/90 transition-colors"

@@ -1,11 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Playfair_Display, Inter } from "next/font/google"
+import { Playfair_Display, Inter, Bebas_Neue, Lato } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" })
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
+const bebas = Bebas_Neue({ subsets: ["latin"], variable: "--font-bebas", weight: "400" })
+const lato = Lato({ subsets: ["latin"], variable: "--font-lato", weight: ["300", "400", "700"] })
 
 export const metadata: Metadata = {
   title: "Brownland Coffee | Bad Day? Good Day? Coffee.",
@@ -21,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${inter.variable} font-sans antialiased`}>
+      <body className={`${playfair.variable} ${inter.variable} ${bebas.variable} ${lato.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

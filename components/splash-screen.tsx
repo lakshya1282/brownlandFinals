@@ -29,21 +29,21 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
       }`}
     >
       <div className="animate-[scaleIn_0.8s_ease-out_forwards] mb-8">
-        <img src="/images/logo.png" alt="Brownland Coffee Logo" className="h-48 w-auto md:h-56 object-contain" />
+        <img src="/BL-LOGO.png" alt="Brownland Coffee Logo" className="h-48 w-auto md:h-56 object-contain" />
       </div>
 
       {/* Tagline with typewriter effect */}
       <div className="overflow-hidden">
         <p className="text-primary font-sans text-xl md:text-2xl font-bold animate-[fadeSlideUp_0.8s_ease-out_0.5s_forwards] opacity-0">
-          Brownland
+          
         </p>
       </div>
 
       {/* Loading dots */}
       <div className="flex gap-2 mt-8">
-        <span className="w-2 h-2 bg-primary rounded-full animate-[bounce_1s_infinite_0ms]" />
-        <span className="w-2 h-2 bg-primary rounded-full animate-[bounce_1s_infinite_200ms]" />
-        <span className="w-2 h-2 bg-primary rounded-full animate-[bounce_1s_infinite_400ms]" />
+        <span className="w-2 h-2 bg-[#3b2213] rounded-full animate-[bounce_1s_infinite_0ms]" />
+        <span className="w-2 h-2 bg-[#3b2213] rounded-full animate-[bounce_1s_infinite_200ms]" />
+        <span className="w-2 h-2 bg-[#3b2213] rounded-full animate-[bounce_1s_infinite_400ms]" />
       </div>
     </div>
   )
