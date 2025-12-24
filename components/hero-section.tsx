@@ -9,8 +9,8 @@
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 hover:scale-105"
           style={{ 
-            backgroundImage: "url('/BL-HERO.PNG')",
-            filter: "brightness(0.7)" // Adds contrast for text readability
+            backgroundImage: "url('/BL-HERO.png')",
+            filter: "brightness(0.7)"
           }}
         />
 
