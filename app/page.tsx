@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { HeroSection } from "@/components/hero-section"
-import { AboutCafeSection } from "@/components/about-cafe-section"
+import { OurJourneySection } from "@/components/about-cafe-section"
 import { OurCafeSection } from "@/components/our-cafe-section"
 import { MouthWaterersSection } from "@/components/mouth-waterers-section"
 import { MenuSection } from "@/components/menu-section"
@@ -23,7 +23,7 @@ export default function Home() {
         <main className="min-h-screen bg-background">
           <Navbar />
           <HeroSection />
-          <AboutCafeSection />
+          <OurJourneySection />
           <OurCafeSection />
           <MouthWaterersSection />
           <MenuSection />
