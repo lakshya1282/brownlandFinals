@@ -45,10 +45,15 @@
 
           <Button
             size="lg"
+          
             className="mt-6 sm:mt-8 bg-white text-[#3b2213] hover:bg-[#d9bfa5] hover:text-white transition-all duration-300 text-sm sm:text-base md:text-lg px-12 py-7 rounded-full shadow-xl shadow-black/30 font-semibold uppercase tracking-widest"
             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-          >
-            Order Online
+          > <a
+                href="https://www.zomato.com/raipur/brownland-coffee-1-civil-lines"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+            Order Online</a>
           </Button>
         </div>
       </section>
