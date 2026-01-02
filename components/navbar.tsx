@@ -68,7 +68,7 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
       {/* Increased vertical padding from py-4 to py-6 or py-8 */}
-      <div className="w-full px-6 sm:px-10 lg:px-16 py-6 md:py-8">
+      <div className="w-full px-2 sm:px-6 lg:px-10 py-2 md:py-3">
         <div className="flex items-center justify-between">
           
           {/* LOGO: Increased height significantly */}
@@ -79,7 +79,7 @@ export function Navbar() {
             <img 
               src={isDarkBackground ? "/BL-WHITE-LOGO (1).png" : "/BL-LOGO.png"} 
               alt="Brownland Coffee" 
-              className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-500" 
+              className="h-12 sm:h-11 md:h-20 lg:h-15 w-auto object-contain transition-all duration-500" 
             />
           </div>
 
