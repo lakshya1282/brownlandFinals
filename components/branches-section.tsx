@@ -151,6 +151,15 @@ export function BranchesSection() {
                 Order on Zomato
               </a>
             </Button>
+            <Button asChild size="lg" className="bg-[#FC8019] text-white hover:bg-[#FC8019]/90 rounded-none font-['Bebas_Neue'] tracking-wider px-8 w-full sm:w-auto">
+              <a
+                href="https://www.swiggy.com/city/raipur/brownland-coffee-samta-colony-rest1205087"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Order on Swiggy
+              </a>
+            </Button>
           </div>
         </div>
       </div>

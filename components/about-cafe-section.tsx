@@ -53,7 +53,7 @@ const JourneyStep: React.FC<JourneyStepProps> = ({ number, year, title, descript
 
 
       {/* Card Container */}
-      <div className="relative z-10 w-[95%] sm:w-[90%] bg-[#F6EEE5] rounded-none min-h-[42vh] flex items-center shadow-[0_25px_50px_-15px_rgba(131,64,36,0.15)]">
+      <div className="relative z-10 w-[95%] sm:w-[90%] bg-[#F6EEE5] rounded-none min-h-[42vh] flex items-center shadow-[0_25px_50px_-15px_rgba(131,64,36,0.15)] flex-col md:block overflow-visible">
 
         {/* Decorative Doodles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
@@ -69,10 +69,14 @@ const JourneyStep: React.FC<JourneyStepProps> = ({ number, year, title, descript
           ))}
         </div>
 
-        {/* Image Slider - Positioned completely outside the card */}
-        {/* Image Slider - Positioned completely outside the card */}
-        <div className={`absolute top-1/2 -translate-y-1/2 z-30 w-[30vw] sm:w-[28vw] md:w-[25vw] lg:w-[350px] group
-          ${isRightAligned ? 'left-0 -translate-x-[50%]' : 'right-0 translate-x-[50%]'}`}>
+        {/* Image Slider */}
+        <div className={`
+          relative z-30 transition-all duration-300 mx-auto
+          w-[70vw] max-w-[300px] mt-[-10vh]
+          md:absolute md:mt-0 
+          md:top-1/2 md:-translate-y-1/2 md:w-[25vw] md:max-w-none lg:w-[350px]
+          ${isRightAligned ? 'md:left-0 md:-translate-x-[50%]' : 'md:right-0 md:translate-x-[50%]'}
+        `}>
           <motion.div
             className="relative aspect-square drop-shadow-[0_30px_30px_rgba(131,64,36,0.2)]"
           >
@@ -96,9 +100,15 @@ const JourneyStep: React.FC<JourneyStepProps> = ({ number, year, title, descript
           </motion.div>
         </div>
 
-        {/* Text Content - No overlap with clear spacing */}
-        <div className={`py-[5vh] flex flex-col justify-center w-full relative z-20
-          ${isRightAligned ? 'pl-[18vw] sm:pl-[16vw] md:pl-[14vw] pr-[5vw]' : 'pr-[18vw] sm:pr-[16vw] md:pr-[14vw] pl-[5vw] text-right ml-auto'}`}>
+        {/* Text Content */}
+        <div className={`
+          relative z-20 w-full flex flex-col justify-center
+          pt-[2vh] pb-[5vh] px-[6vw] text-center
+          md:py-[5vh]
+          ${isRightAligned
+            ? 'md:pl-[18vw] md:sm:pl-[16vw] md:md:pl-[14vw] md:pr-[5vw] md:text-left'
+            : 'md:pr-[18vw] md:sm:pr-[16vw] md:md:pr-[14vw] md:pl-[5vw] md:text-right md:ml-auto'}
+        `}>
 
           <motion.span
             initial={{ opacity: 0, x: isRightAligned ? -20 : 20 }}
@@ -223,7 +233,7 @@ export function AboutCafeSection() {
             year="EST. 2020"
             title="THE FIRST GRIND"
             description="Our story began in 2020, a year that challenged the world but inspired us to create something grounding. We opened our very first doors in Shailendra Nagar, Raipur, with a simple belief: that a neighborhood deserves a world-class coffee experience. Amidst the quiet streets, the aroma of our first roast became a beacon for coffee lovers. We didn't just want to be a cafe; we wanted to be the 'Brownland'—a reliable, earthy escape where every cup felt like coming home."
-            images={["/ourjourney/Behind zudio.png", "/ourjourney/coffeebanner1.png"]}
+            images={["/ourjourney/Behind zudio.png"]}
             isRightAligned={true}
             doodles={[{ src: "/images/sandwich.png", pos: "top-4 right-4" }, { src: "/images/cake.png", pos: "bottom-4 right-4" }]}
           />

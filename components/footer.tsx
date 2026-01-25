@@ -17,7 +17,7 @@ export function Footer() {
               <img src="/BL-WHITE-LOGO (1).png" alt="Brownland Coffee" className="h-24 w-auto object-contain brightness-110 drop-shadow-lg hover:scale-105 transition-transform duration-300" />
             </div>
             <p className="text-[#fffaf3]/80 leading-relaxed font-['Lato']">
-              Bad Day? Coffee. Good Day? Coffee. Your perfect companion for every mood and moment.
+             Think  coffee, Think Brownland!. 
             </p>
           </div>
 
