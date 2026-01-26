@@ -10,7 +10,6 @@ import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { Navbar } from "@/components/navbar"
 import { AOSProvider } from "@/components/aos-provider"
-import { SplashScreen } from "@/components/splash-screen"
 // import HeroBanner from '@/components/cont';
 import BestSellers from '@/components/best';
 

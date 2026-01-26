@@ -105,7 +105,7 @@ export function FranchiseNavbar() {
         {/* DESKTOP LAYOUT - Left nav, Center logo, Right nav */}
         <div className="hidden md:flex items-center justify-between w-full">
 
-          {/* LEFT NAV ITEMS - Home */}
+          {/* LEFT NAV ITEMS - Home, About */}
           <div className="flex items-center gap-8 lg:gap-12 flex-1 justify-start">
             <Link
               href="/"
@@ -114,6 +114,16 @@ export function FranchiseNavbar() {
               style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
             >
               Home
+              <span className={`absolute -bottom-2 left-0 w-0 h-[2px] transition-all duration-500 group-hover:w-full ${(isDarkBackground || showBackground) ? "bg-white" : "bg-[#683419]"
+                }`} />
+            </Link>
+            <Link
+              href="/about"
+              className={`text-xs lg:text-sm uppercase tracking-[0.35em] font-medium transition-colors duration-500 relative group ${(isDarkBackground || showBackground) ? "text-white/90 hover:text-white" : "text-[#683419] hover:text-[#683419]/70"
+                }`}
+              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+            >
+              About
               <span className={`absolute -bottom-2 left-0 w-0 h-[2px] transition-all duration-500 group-hover:w-full ${(isDarkBackground || showBackground) ? "bg-white" : "bg-[#683419]"
                 }`} />
             </Link>
@@ -167,6 +177,13 @@ export function FranchiseNavbar() {
               className="text-[13px] uppercase tracking-[0.45em] font-medium"
             >
               Home
+            </Link>
+            <Link
+              href="/about"
+              onClick={() => setIsOpen(false)}
+              className="text-[13px] uppercase tracking-[0.45em] font-medium"
+            >
+              About
             </Link>
             <button
               onClick={() => scrollToSection("#why-us")}

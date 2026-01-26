@@ -156,7 +156,7 @@ export default function BestSellers() {
             animate={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-6 inline-block bg-[#683419] text-[#F6EEE5] px-8 py-2 font-bebas text-lg tracking-[0.2em] uppercase hover:bg-[#834024] transition-colors duration-300 shadow-md border border-[#F6EEE5]/20 rounded-sm"
+            className="mt-6 inline-block bg-[#834024] text-[#F6EEE5] px-8 py-2 font-bebas text-lg tracking-[0.2em] uppercase hover:bg-[#683419] transition-colors duration-300 shadow-md border border-[#F6EEE5]/20 rounded-none"
           >
             Explore Menu
           </motion.a>

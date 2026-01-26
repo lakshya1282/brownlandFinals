@@ -46,8 +46,7 @@ export function HeroSection() {
           <Link href="/menu">
             <Button
               size="lg"
-              className="font-heading font-bold bg-brownland-light text-brownland hover:bg-brownland hover:text-brownland-light transition-all duration-300 text-sm sm:text-base md:text-lg px-12 py-7 rounded-full shadow-xl shadow-black/30 uppercase tracking-widest"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+              className="font-['Bebas_Neue'] font-bold bg-[#F6EEE5] text-[#834024] hover:bg-[#834024] hover:text-[#F6EEE5] transition-all duration-300 text-sm sm:text-base md:text-lg px-12 py-7 rounded-none shadow-xl shadow-black/30 uppercase tracking-wider"
             >
               View Menu
             </Button>
@@ -55,8 +54,7 @@ export function HeroSection() {
           <Link href="/franchise">
             <Button
               size="lg"
-              className="font-heading font-bold bg-brownland text-brownland-light hover:bg-brownland-light hover:text-brownland transition-all duration-300 text-sm sm:text-base md:text-lg px-12 py-7 rounded-full shadow-xl shadow-black/30 uppercase tracking-widest"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+              className="font-['Bebas_Neue'] font-bold bg-[#834024] text-[#F6EEE5] hover:bg-[#F6EEE5] hover:text-[#834024] transition-all duration-300 text-sm sm:text-base md:text-lg px-12 py-7 rounded-none shadow-xl shadow-black/30 uppercase tracking-wider"
             >
               Partner With Us
             </Button>

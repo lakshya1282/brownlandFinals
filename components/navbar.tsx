@@ -111,6 +111,7 @@ export function Navbar() {
   const navItems = [
     { name: "Home", href: "/", id: "home" },
     { name: "The Story", href: "/#about", id: "story" },
+    { name: "About", href: "/about", id: "about" },
     { name: "Menu", href: "/menu", id: "menu" },
     { name: "Franchise", href: "/franchise", id: "franchise" },
     { name: "Contact", href: "/#contact", id: "aboutus" },
@@ -153,7 +154,7 @@ export function Navbar() {
 
           {/* LEFT NAV ITEMS */}
           <div className="flex items-center gap-8 lg:gap-12 flex-1 justify-start">
-            {navItems.slice(0, 2).map((item) => (
+            {navItems.slice(0, 3).map((item) => (
               <Link
                 key={item.id}
                 href={item.href}
@@ -183,7 +184,7 @@ export function Navbar() {
 
           {/* RIGHT NAV ITEMS */}
           <div className="flex items-center gap-8 lg:gap-12 flex-1 justify-end">
-            {navItems.slice(2).map((item) => (
+            {navItems.slice(3).map((item) => (
               <Link
                 key={item.id}
                 href={item.href}

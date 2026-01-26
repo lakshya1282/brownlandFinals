@@ -49,7 +49,7 @@ export function FranchiseHero() {
         <Button
           size="lg"
           onClick={scrollToForm}
-          className="font-heading font-bold mt-6 sm:mt-8 bg-brownland-light text-brownland hover:bg-brownland hover:text-brownland-light transition-all duration-300 text-sm sm:text-base md:text-lg px-12 py-7 rounded-full shadow-xl shadow-black/30 uppercase tracking-widest"
+          className="font-['Bebas_Neue'] font-bold mt-6 sm:mt-8 bg-[#F6EEE5] text-[#834024] hover:bg-[#834024] hover:text-[#F6EEE5] transition-all duration-300 text-sm sm:text-base md:text-lg px-12 py-7 rounded-none shadow-xl shadow-black/30 uppercase tracking-wider"
         >
           Apply for Franchise
         </Button>
@@ -57,7 +57,7 @@ export function FranchiseHero() {
           size="lg"
           variant="outline"
           asChild
-          className="text-base sm:text-lg px-6 sm:px-8 border-white/30 text-white hover:bg-white/10 bg-transparent w-full sm:w-auto"
+          className="font-['Bebas_Neue'] text-base sm:text-lg px-6 sm:px-8 border-white/30 text-white hover:bg-white/10 bg-transparent w-full sm:w-auto rounded-none tracking-wider"
         >
           <a href="tel:+916265470873">Call: +916265470873</a>
         </Button>
