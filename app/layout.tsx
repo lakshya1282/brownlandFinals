@@ -13,7 +13,10 @@ export const metadata: Metadata = {
   title: "Brownland Coffee | Think Coffee, Think Brownland!",
   description:
     "Experience premium coffee, thick shakes, and delicious sandwiches at Brownland Coffee. Your perfect coffee companion for every mood.",
-  generator: 'v0.app'
+  generator: 'v0.app',
+   verification: {
+    google: "r3kmHw-P7Jm-11HWrITX_VThEH2wQDJa_an7xJjCwb0",
+  },
 }
 
 import { Toaster } from "sonner"
