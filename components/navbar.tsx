@@ -113,6 +113,7 @@ export function Navbar() {
     { name: "The Story", href: "/#about", id: "story" },
     { name: "About", href: "/about", id: "about" },
     { name: "Menu", href: "/menu", id: "menu" },
+    { name: "Blog", href: "/blog", id: "blog" },
     { name: "Franchise", href: "/franchise", id: "franchise" },
     { name: "Contact", href: "/#contact", id: "aboutus" },
   ]
