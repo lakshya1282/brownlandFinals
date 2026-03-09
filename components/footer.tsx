@@ -17,7 +17,7 @@ export function Footer() {
               <img src="/BL-WHITE-LOGO (1).png" alt="Brownland Coffee" className="h-24 w-auto object-contain brightness-110 drop-shadow-lg hover:scale-105 transition-transform duration-300" />
             </div>
             <p className="text-[#fffaf3]/80 leading-relaxed font-['Lato']">
-             Think  coffee, Think Brownland!. 
+              Think  coffee, Think Brownland!.
             </p>
           </div>
 
@@ -28,10 +28,8 @@ export function Footer() {
               Hours
             </h3>
             <div className="space-y-2 text-[#fffaf3]/80 font-['Lato']">
-              <p>Monday - Saturday</p>
-              <p className="text-[#fffaf3] font-medium">9:00 AM - 10:00 PM</p>
-              <p className="mt-4">Sunday</p>
-              <p className="text-[#fffaf3] font-medium">10:00 AM - 9:00 PM</p>
+              <p>Monday - Sunday</p>
+              <p className="text-[#fffaf3] font-medium">9:00 AM - 11:30 PM</p>
             </div>
           </div>
 

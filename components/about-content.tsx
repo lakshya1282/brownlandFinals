@@ -5,8 +5,8 @@ import { motion } from "framer-motion"
 export function AboutContent() {
     const features = [
         {
-            title: "0% Royalty",
-            description: "Keep 100% of your generated profits. We believe in your success, which is why there are no recurring royalty fees—ever."
+            title: "Low Fixed Royalty",
+            description: "We follow a simple fixed ₹10,000 royalty model allowing you to keep most of your profits. No percentage sharing."
         },
         {
             title: "Proven Brand",
@@ -45,7 +45,7 @@ export function AboutContent() {
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1.0] }
+            transition: { duration: 0.5 }
         }
     }
 

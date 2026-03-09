@@ -43,7 +43,7 @@ export function FranchiseHero() {
         <p
           className="font-body font-medium text-sm sm:text-base md:text-lg lg:text-xl text-brownland-light/90 max-w-2xl mx-auto leading-relaxed mb-8 md:mb-10"
         >
-          Become a Member of BROWNLAND COFFEE Family with 0% Royalty!
+          Become a Member of BROWNLAND COFFEE Family with a Low Fixed ₹10,000 Royalty!
         </p>
 
         <Button

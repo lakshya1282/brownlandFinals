@@ -99,7 +99,7 @@ export function ContactSection() {
           <div className="space-y-4 md:space-y-6 aos-fade-left">
             {[
               { icon: MapPin, title: "Visit Us", content: "Find us on Google Maps", link: "#branches", linkText: "Get Directions" },
-              { icon: Clock, title: "Opening Hours", content: "Mon - Sat: 9:00 AM - 10:00 PM\nSunday: 10:00 AM - 9:00 PM" },
+              { icon: Clock, title: "Opening Hours", content: "Mon - Sun: 9:00 AM - 11:30 PM" },
               { icon: Phone, title: "Call Us", content: "For orders and inquiries", link: "tel:+916265470873", linkText: "+91 6265470873" },
               { icon: Instagram, title: "Follow Us", content: "@brownlandcoffee", link: "https://www.instagram.com/brownlandcoffee", linkText: "View on Instagram", external: true }
             ].map((item, index) => (

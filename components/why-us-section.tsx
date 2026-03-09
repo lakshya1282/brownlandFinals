@@ -1,9 +1,9 @@
 export function WhyUsSection() {
   const benefits = [
     {
-      title: "0% Royalty",
-      description: "Keep all your profits. No recurring royalty fees ever.",
-      banner: "ZERO FEES",
+      title: "Low Fixed Royalty",
+      description: "Complete transparency with a fixed ₹10,000 royalty. No percentage cuts, no hidden commissions.",
+      banner: "FIXED ROYALTY",
       accent: "from-amber-500 to-orange-600",
     },
     {
@@ -54,7 +54,7 @@ export function WhyUsSection() {
           </h2>
           <div className="w-24 h-[1px] bg-brownland mx-auto mb-6 opacity-40" />
           <p className="font-body text-brownland max-w-2xl mx-auto leading-relaxed">
-            Join a growing family of successful franchisees with unmatched support and zero royalty fees
+            Join a growing family of successful franchisees with unmatched support and a simple fixed royalty model
           </p>
         </div>
 
