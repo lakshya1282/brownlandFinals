@@ -51,10 +51,25 @@ const branches = [
   },
   {
     id: 7,
-    name: "Mowa (Opening Soon)",
-    address: " ",
+    name: "Mowa",
+    address: "Near Shri Balaji Hospital, Dubey Colony, Mowa, Raipur, Chhattisgarh 492014",
+    mapUrl: "https://maps.app.goo.gl/8uEP9hTQu54KydAQ8",
+    coords: { lat: 21.2456, lng: 81.6198 },
+  },
+  {
+    id: 8,
+    name: "Kachna",
+    address: "7M8W+JGR, Kachna, Chhattisgarh 492014",
+    mapUrl: "https://maps.app.goo.gl/UAbi9CTR6o3Y5upMA",
+    coords: { lat: 21.2456, lng: 81.6198 },
+  },
+  {
+    id: 9,
+    name: "Bilaspur",
+    address: "Bilaspur, Chhattisgarh",
     mapUrl: "",
     coords: { lat: 21.2456, lng: 81.6198 },
+    openingSoon: true,
   },
 ]
 
@@ -72,39 +87,41 @@ export function BranchesSection() {
           </h2>
           <div className="w-24 h-[1px] bg-[#834024] mx-auto mb-6 opacity-40" />
           <p className="font-['Lato'] font-bold text-[#834024] max-w-xl mx-auto opacity-90 leading-relaxed text-[4vw] sm:text-base">
-            Visit any of our 7 locations across Raipur for the perfect cup of coffee
+            Visit any of our 9 locations for the perfect cup of coffee
           </p>
         </div>
 
         {/* Branch Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
           {branches.map((branch, index) => (
             <div
               key={branch.id}
-              className={`bg-white/70 backdrop-blur-xl rounded-none p-6 border border-[#834024]/10 hover:border-[#834024] transition-all duration-300 group aos-fade-up shadow-md hover:shadow-2xl hover:-translate-y-1 ${index === 6 ? 'opacity-60 pointer-events-none' : ''}`}
+              className={`bg-white/70 backdrop-blur-xl rounded-none p-6 border border-[#834024]/10 hover:border-[#834024] transition-all duration-300 group aos-fade-up shadow-md hover:shadow-2xl hover:-translate-y-1 ${branch.openingSoon ? 'opacity-60 pointer-events-none' : ''}`}
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-[#834024]/10 p-3 rounded-full group-hover:bg-[#834024]/20 transition-colors shrink-0">
                   <MapPin className="h-5 w-5 text-[#834024]" />
                 </div>
-                <h3 className="font-['Bebas_Neue'] text-xl tracking-wide text-[#834024] leading-tight">{branch.name}</h3>
+                <h3 className="font-['Bebas_Neue'] text-xl tracking-wide text-[#834024] leading-tight">
+                  {branch.name} {branch.openingSoon && "(Opening Soon)"}
+                </h3>
               </div>
               <p className="font-['Lato'] text-[#834024]/80 text-sm mb-4 leading-relaxed min-h-[60px]">{branch.address}</p>
-              {index !== 6 && (
+              {!branch.openingSoon && (
                 <div className="flex items-center gap-2 text-[#834024]/60 text-xs mb-4">
                   <Clock className="h-4 w-4" />
                   <span className="font-['Lato']">9:00 AM - 10:00 PM</span>
                 </div>
               )}
               <Button
-                asChild={index !== 6}
+                asChild={!branch.openingSoon}
                 variant="outline"
                 size="sm"
                 className="w-full border-2 border-[#834024] text-[#834024] hover:bg-[#834024]/10 bg-transparent rounded-none font-['Bebas_Neue'] tracking-wider"
-                disabled={index === 6}
+                disabled={branch.openingSoon}
               >
-                {index === 6 ? (
+                {branch.openingSoon ? (
                   <span>
                     <Navigation className="h-4 w-4 mr-2 inline" />
                     Coming Soon...
