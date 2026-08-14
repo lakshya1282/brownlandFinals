@@ -10,7 +10,7 @@ const bebas = Bebas_Neue({ subsets: ["latin"], variable: "--font-bebas", weight:
 const lato = Lato({ subsets: ["latin"], variable: "--font-lato", weight: ["300", "400", "700"] })
 
 export const metadata: Metadata = {
-  title: "Brownland Coffee | Think Coffee, Think Brownland!",
+  title: "Brownland Coffee | One of Chhattisgarh’s Fastest-Growing Coffee Chains",
   description:
     "Experience premium coffee, thick shakes, and delicious sandwiches at Brownland Coffee. Your perfect coffee companion for every mood.",
   generator: 'v0.app',

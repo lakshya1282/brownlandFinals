@@ -77,7 +77,7 @@ export function FranchiseNavbar() {
         ? "bg-gradient-to-b from-[#683419]/95 to-[#834024]/90 backdrop-blur-md"
         : "bg-transparent"
       }`}>
-      <div className="w-full px-6 sm:px-8 lg:px-16 py-2 md:py-3">
+      <div className="w-full px-6 sm:px-8 lg:px-16 pt-1 pb-2 md:pt-1 md:pb-2">
 
         {/* MOBILE LAYOUT - Logo left, menu right */}
         <div className="flex md:hidden items-center justify-between">
@@ -86,7 +86,7 @@ export function FranchiseNavbar() {
             <img
               src={(isDarkBackground || showBackground) ? "/BL-WHITE-LOGO (1).png" : "/BL-LOGO.png"}
               alt="Brownland Coffee"
-              className="h-12 sm:h-11 w-auto object-contain transition-all duration-500"
+              className="h-20 sm:h-20 w-auto object-contain transition-all duration-500"
             />
           </Link>
 
@@ -134,7 +134,7 @@ export function FranchiseNavbar() {
             <img
               src={(isDarkBackground || showBackground) ? "/BL-WHITE-LOGO (1).png" : "/BL-LOGO.png"}
               alt="Brownland Coffee"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-500"
+              className="h-24 md:h-28 lg:h-32 w-auto object-contain transition-all duration-500"
             />
           </Link>
 

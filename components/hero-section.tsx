@@ -24,7 +24,7 @@ export function HeroSection() {
           className="text-xs sm:text-sm md:text-base tracking-[0.4em] uppercase text-[#d9bfa5] mb-4 md:mb-6 font-medium"
           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
         >
-
+          One of Chhattisgarh’s Fastest-Growing Coffee Chains
         </p>
 
         <h1

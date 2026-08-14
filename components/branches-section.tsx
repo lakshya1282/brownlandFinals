@@ -71,6 +71,22 @@ const branches = [
     coords: { lat: 21.2456, lng: 81.6198 },
     openingSoon: true,
   },
+  {
+    id: 10,
+    name: "Bhilai",
+    address: "Bhilai, Chhattisgarh",
+    mapUrl: "",
+    coords: { lat: 21.1938, lng: 81.3509 },
+    openingSoon: true,
+  },
+  {
+    id: 11,
+    name: "Magneto Mall",
+    address: "Magneto The Mall, Labhandih, Raipur, Chhattisgarh",
+    mapUrl: "",
+    coords: { lat: 21.2418, lng: 81.6781 },
+    openingSoon: true,
+  },
 ]
 
 export function BranchesSection() {
@@ -87,7 +103,7 @@ export function BranchesSection() {
           </h2>
           <div className="w-24 h-[1px] bg-[#834024] mx-auto mb-6 opacity-40" />
           <p className="font-['Lato'] font-bold text-[#834024] max-w-xl mx-auto opacity-90 leading-relaxed text-[4vw] sm:text-base">
-            Visit any of our 9 locations for the perfect cup of coffee
+            Visit any of our 11 locations for the perfect cup of coffee
           </p>
         </div>
 

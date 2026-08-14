@@ -127,7 +127,7 @@ export function Navbar() {
           : "bg-transparent"
       }`}>
       {/* Increased vertical padding from py-4 to py-6 or py-8 */}
-      <div className="w-full px-6 sm:px-8 lg:px-16 py-2 md:py-3">
+      <div className="w-full px-6 sm:px-8 lg:px-16 pt-1 pb-2 md:pt-1 md:pb-2">
 
         {/* MOBILE LAYOUT - Logo left, menu right */}
         <div className="flex md:hidden items-center justify-between">
@@ -136,7 +136,7 @@ export function Navbar() {
             <img
               src={(isDarkBackground || showBackground) ? "/BL-WHITE-LOGO (1).png" : "/BL-LOGO.png"}
               alt="Brownland Coffee"
-              className="h-12 sm:h-11 w-auto object-contain transition-all duration-500"
+              className="h-20 sm:h-20 w-auto object-contain transition-all duration-500"
             />
           </Link>
 
@@ -150,38 +150,38 @@ export function Navbar() {
           </button>
         </div>
 
-        {/* DESKTOP LAYOUT - Left nav, Center logo, Right nav */}
-        <div className="hidden md:flex items-center justify-between w-full">
+      {/* DESKTOP LAYOUT - Left nav, Center logo, Right nav */}
+      <div className="hidden md:flex items-center justify-between w-full">
 
-          {/* LEFT NAV ITEMS */}
-          <div className="flex items-center gap-8 lg:gap-12 flex-1 justify-start">
-            {navItems.slice(0, 3).map((item) => (
-              <Link
-                key={item.id}
-                href={item.href}
-                onClick={(e) => handleNavClick(e, item.href, item.id)}
-                className={`text-sm lg:text-base uppercase tracking-[0.35em] font-medium relative group transition-colors duration-500 ${(isDarkBackground || showBackground)
-                  ? "text-white/90 hover:text-white"
-                  : "text-[#683419] hover:text-[#683419]/70"
-                  }`}
-                style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-              >
-                {item.name}
-                <span className={`absolute -bottom-2 left-0 w-0 h-[2px] transition-all duration-500 group-hover:w-full ${(isDarkBackground || showBackground) ? "bg-white" : "bg-[#683419]"
-                  }`} />
-              </Link>
-            ))}
-          </div>
+        {/* LEFT NAV ITEMS */}
+        <div className="flex items-center gap-8 lg:gap-12 flex-1 justify-start">
+          {navItems.slice(0, 3).map((item) => (
+            <Link
+              key={item.id}
+              href={item.href}
+              onClick={(e) => handleNavClick(e, item.href, item.id)}
+              className={`text-sm lg:text-base uppercase tracking-[0.35em] font-medium relative group transition-colors duration-500 ${(isDarkBackground || showBackground)
+                ? "text-white/90 hover:text-white"
+                : "text-[#683419] hover:text-[#683419]/70"
+                }`}
+              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+            >
+              {item.name}
+              <span className={`absolute -bottom-2 left-0 w-0 h-[2px] transition-all duration-500 group-hover:w-full ${(isDarkBackground || showBackground) ? "bg-white" : "bg-[#683419]"
+                }`} />
+            </Link>
+          ))}
+        </div>
 
-          {/* CENTER LOGO */}
-          <Link href="/" className="flex-shrink-0 cursor-pointer mx-8 lg:mx-12">
-            <img
-              src={(isDarkBackground || showBackground) ? "/BL-WHITE-LOGO (1).png" : "/BL-LOGO.png"}
-              alt="Brownland Coffee"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-500 hover:scale-105"
-              style={{ filter: 'drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4)) brightness(1.1)' }}
-            />
-          </Link>
+        {/* CENTER LOGO */}
+        <Link href="/" className="flex-shrink-0 cursor-pointer mx-8 lg:mx-12">
+          <img
+            src={(isDarkBackground || showBackground) ? "/BL-WHITE-LOGO (1).png" : "/BL-LOGO.png"}
+            alt="Brownland Coffee"
+            className="h-24 md:h-28 lg:h-32 w-auto object-contain transition-all duration-500 hover:scale-105"
+            style={{ filter: 'drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4)) brightness(1.1)' }}
+          />
+        </Link>
 
           {/* RIGHT NAV ITEMS */}
           <div className="flex items-center gap-8 lg:gap-12 flex-1 justify-end">

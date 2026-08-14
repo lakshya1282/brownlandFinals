@@ -14,7 +14,7 @@ export function Footer() {
           {/* Brand */}
           <div className="aos-fade-up">
             <div className="mb-6 cursor-pointer" onClick={scrollToTop} title="Back to Top">
-              <img src="/BL-WHITE-LOGO (1).png" alt="Brownland Coffee" className="h-24 w-auto object-contain brightness-110 drop-shadow-lg hover:scale-105 transition-transform duration-300" />
+              <img src="/BL-WHITE-LOGO (1).png" alt="Brownland Coffee" className="h-32 w-auto object-contain brightness-110 drop-shadow-lg hover:scale-105 transition-transform duration-300" />
             </div>
             <p className="text-[#fffaf3]/80 leading-relaxed font-['Lato']">
               Think  coffee, Think Brownland!.
